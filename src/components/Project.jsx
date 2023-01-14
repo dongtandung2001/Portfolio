@@ -19,7 +19,7 @@ const Project = () => {
       id: 2,
       src: movierental,
       code: "https://github.com/dongtandung2001/MovieRental",
-      demo: "https://github.com/dongtandung2001/MovieRental",
+      demo: "https://movierentalapps.com/",
       title: "MERN - Movie Rental Website",
     },
     {
