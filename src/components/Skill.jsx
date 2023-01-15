@@ -6,7 +6,7 @@ import reactPic from "../assets/react.png";
 import express from "../assets/express.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
-import nodejs from "../assets/nodejs.png";
+import nodejs from "../assets/node.png";
 import aws from "../assets/aws.png";
 import python from "../assets/python.png";
 import java from "../assets/java.png";
@@ -15,6 +15,7 @@ import mongodb from "../assets/mongodb.png";
 import heroku from "../assets/heroku.png";
 import bootstrap from "../assets/bootstrap.png";
 import django from "../assets/django.png";
+import netlify from "../assets/netlify.png";
 
 const Skill = () => {
   const skills = [
@@ -66,7 +67,7 @@ const Skill = () => {
           id: 7,
           src: express,
           title: "Express.Js",
-          style: "shadow-sky-400",
+          style: "shadow-sky-800",
         },
         {
           id: 8,
@@ -121,6 +122,12 @@ const Skill = () => {
           src: heroku,
           title: "Heroku",
           style: "shadow-purple-400",
+        },
+        {
+          id: 16,
+          src: netlify,
+          title: "Netlify",
+          style: "shadow-blue-400",
         },
       ],
     },
