@@ -12,7 +12,7 @@ const Project = () => {
       id: 1,
       src: sql4u,
       code: "https://github.com/dongtandung2001/SQL4U",
-      demo: "https://github.com/dongtandung2001/SQL4U",
+      demo: "https://www.sql4u.dev/",
       title: "MERN - SQL4U - E-learning website",
     },
     {
