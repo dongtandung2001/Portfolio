@@ -13,8 +13,8 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-10">
-          I am currently a Senior at San Jose State University majoring in
-          Computer Science.
+          I am a Computer Science student at San Jose State University
+          passionate about software engineering
         </p>
         <br />
         <p className="text-xl">
@@ -23,8 +23,12 @@ const About = () => {
         </p>
         <br />
         <p className="text-xl">
-          I would love to learn about new tech stack in my freetime to cultivate
-          my skillset.
+          Beyond the classroom, I like to challenge myself and learn with
+          personal projects and involving myself in student organizations.
+        </p>
+        <p className="text-xl">
+          I'm currently in the dev team in SCE (Software and Computer Engineer
+          Club) at my school.
         </p>
       </div>
     </div>
