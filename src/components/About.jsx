@@ -26,9 +26,11 @@ const About = () => {
           Beyond the classroom, I like to challenge myself and learn with
           personal projects and involving myself in student organizations.
         </p>
+        <br />
         <p className="text-xl">
-          I'm currently in the dev team in SCE (Software and Computer Engineer
-          Club) at my school.
+          I'm currently in the dev team in SCE, Software and Computer Engineer
+          Club, at my school. It's primary focus is to aid students by offering
+          workshops, study groups, info sessions, and social events
         </p>
       </div>
     </div>
