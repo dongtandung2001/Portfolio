@@ -1,10 +1,11 @@
 import React from "react";
 import sql4u from "../assets/portfolio/sql4u.png";
-import moshify from "../assets/portfolio/moshify.png";
 import memory from "../assets/portfolio/memory.png";
 import api from "../assets/portfolio/api.png";
 import storeapi from "../assets/portfolio/storeapi.png";
 import movierental from "../assets/portfolio/movierental.png";
+import discord from "../assets/portfolio/discord.png";
+import discordGpt from "../assets/portfolio/gpt.png"
 
 const Project = () => {
   const projects = [
@@ -17,38 +18,38 @@ const Project = () => {
     },
     {
       id: 2,
-      src: movierental,
-      code: "https://github.com/dongtandung2001/MovieRental",
-      demo: "https://movierentalapps.com/",
-      title: "MERN - Movie Rental Website",
+      src: discord,
+      demo: "https://github.com/SCE-Development/SCE-discord-bot",
+      code: "https://github.com/SCE-Development/SCE-discord-bot",
+      title: "Discord.js - Discord Music Bot",
     },
     {
       id: 3,
+      src: discordGpt,
+      code: "https://github.com/dongtandung2001/aio-discord-bot",
+      demo: "https://github.com/dongtandung2001/aio-discord-bot/",
+      title: "Discord.py, OpenAI API - Multifunctional Discord Bot",
+    },
+    {
+      id: 4,
       src: memory,
       demo: "https://ajar-scratch-address.glitch.me/",
       code: "https://github.com/dongtandung2001/Memory-game",
       title: "HTML, CSS, JS - Memory Game",
     },
     {
-      id: 4,
+      id: 5,
       src: api,
       code: "https://github.com/dongtandung2001/Song_Searching_API",
       demo: "https://github.com/dongtandung2001/Song_Searching_API",
       title: "Flask, SQL - Song searching API",
     },
     {
-      id: 5,
+      id: 6,
       src: storeapi,
       code: "https://github.com/dongtandung2001/Store-API",
       demo: "https://github.com/dongtandung2001/Store-API",
       title: "Django, MySQL- Store API",
-    },
-    {
-      id: 6,
-      src: moshify,
-      demo: "https://moshify-daniel.netlify.app/",
-      code: "https://github.com/dongtandung2001/codewithmosh-html-course",
-      title: "HTML, CSS - Homepage",
     },
   ];
   return (
@@ -67,7 +68,7 @@ const Project = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {projects.map(({ id, src, code, demo, title }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <h1 className="flex items-center justify-center">{title}</h1>
+              <h1 className="flex items-center justify-center text-center">{title}</h1>
               <img
                 src={src}
                 alt=""

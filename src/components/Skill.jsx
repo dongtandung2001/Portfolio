@@ -16,6 +16,7 @@ import heroku from "../assets/heroku.png";
 import bootstrap from "../assets/bootstrap.png";
 import django from "../assets/django.png";
 import netlify from "../assets/netlify.png";
+import docker from "../assets/docker.png"
 
 const Skill = () => {
   const skills = [
@@ -97,7 +98,7 @@ const Skill = () => {
       ],
     },
     {
-      header: "CI/CD",
+      header: "DevOps",
       skills: [
         {
           id: 11,
@@ -105,6 +106,13 @@ const Skill = () => {
           title: "GitHub",
           style: "shadow-gray-400",
         },
+        {
+          id: 16,
+          src: docker,
+          title: "Docker",
+          style: "shadow-sky-800",
+        },
+
       ],
     },
 
@@ -117,18 +125,7 @@ const Skill = () => {
           title: "AWS",
           style: "shadow-orange-400",
         },
-        {
-          id: 13,
-          src: heroku,
-          title: "Heroku",
-          style: "shadow-purple-400",
-        },
-        {
-          id: 16,
-          src: netlify,
-          title: "Netlify",
-          style: "shadow-blue-400",
-        },
+
       ],
     },
 
