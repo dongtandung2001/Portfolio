@@ -20,6 +20,7 @@ import docker from "../assets/docker.png";
 import vue from "../assets/vue.png";
 import astro from "../assets/astro.png";
 import gcp from "../assets/gcp.png";
+import typescript from "../assets/ts.png";
 
 const Skill = () => {
   const skills = [
@@ -27,22 +28,28 @@ const Skill = () => {
       header: "Programming Languages",
       skills: [
         {
-          id: 1,
-          src: java,
-          title: "Java",
-          style: "shadow-red-400",
-        },
-        {
           id: 2,
           src: python,
           title: "Python",
           style: "shadow-blue-400",
         },
         {
+          id: 21,
+          src: typescript,
+          title: "Typescript",
+          style: "shadow-blue-500",
+        },
+        {
           id: 3,
           src: javascript,
           title: "JavaScript",
           style: "shadow-yellow-500",
+        },
+        {
+          id: 1,
+          src: java,
+          title: "Java",
+          style: "shadow-red-400",
         },
         {
           id: 4,
