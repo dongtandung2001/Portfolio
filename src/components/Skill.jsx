@@ -16,7 +16,10 @@ import heroku from "../assets/heroku.png";
 import bootstrap from "../assets/bootstrap.png";
 import django from "../assets/django.png";
 import netlify from "../assets/netlify.png";
-import docker from "../assets/docker.png"
+import docker from "../assets/docker.png";
+import vue from "../assets/vue.png";
+import astro from "../assets/astro.png";
+import gcp from "../assets/gcp.png";
 
 const Skill = () => {
   const skills = [
@@ -65,6 +68,12 @@ const Skill = () => {
           style: "shadow-blue-600",
         },
         {
+          id: 18,
+          src: vue,
+          title: "Vue.Js",
+          style: "shadow-green-500",
+        },
+        {
           id: 7,
           src: express,
           title: "Express.Js",
@@ -75,6 +84,12 @@ const Skill = () => {
           src: nodejs,
           title: "Node.Js",
           style: "shadow-green-400",
+        },
+        {
+          id: 19,
+          src: astro,
+          title: "Astro.Js",
+          style: "shadow-purple-500",
         },
         {
           id: 16,
@@ -107,12 +122,11 @@ const Skill = () => {
           style: "shadow-gray-400",
         },
         {
-          id: 16,
+          id: 17,
           src: docker,
           title: "Docker",
           style: "shadow-sky-800",
         },
-
       ],
     },
 
@@ -125,7 +139,12 @@ const Skill = () => {
           title: "AWS",
           style: "shadow-orange-400",
         },
-
+        {
+          id: 20,
+          src: gcp,
+          title: "Google Cloud Platform",
+          style: "shadow-sky-500",
+        },
       ],
     },
 

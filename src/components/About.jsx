@@ -12,27 +12,35 @@ const About = () => {
             Dung (Daniel) Dong
           </p>
         </div>
-        <p className="text-xl mt-10">
-          I am a Computer Science student at San Jose State University
-          passionate about software engineering
+        <p className=" text-lg mt-10 ">
+          I'm a passionate Software Engineer with a Bachelor's degree in
+          Computer Science and currently pursuing a Master's degree in Software
+          Engineering at San Jose State University. My technical expertise lies
+          in a variety of programming languages, frameworks, and tools,
+          including:
+        </p>
+        <li className=" text-lg mt-5 italic">
+          Programming Languages: TypeScript, Python, JavaScript, Java.
+        </li>
+        <li className=" text-lg mt-5 italic">
+          Frameworks: React.js, Vue.js, Astro.js.
+        </li>
+        <li className=" text-lg mt-5 italic">Databases: SQL, MongoDB.</li>
+        <li className=" text-lg mt-5 italic">Cloud Platforms: AWS, GCP.</li>
+
+        <br />
+        <p className="text-lg">
+          I'm driven by a desire to create innovative and efficient software
+          solutions. I'm constantly learning and adapting to new technologies to
+          stay at the forefront of the industry. My skills and experience allow
+          me to contribute effectively to various software development projects.
         </p>
         <br />
-        <p className="text-xl">
-          Through a lot of projects and a Hackathon, I have developed my problem
-          solving, time management, and teamwork along with techincal skills.
+        <p className="text-lg ">
+          I'm eager to apply my knowledge and skills to exciting new projects
+          and contribute to the success of a dynamic team.
         </p>
         <br />
-        <p className="text-xl">
-          Beyond the classroom, I like to challenge myself and learn with
-          personal projects and involving myself in student organizations.
-        </p>
-        <br />
-        <p className="text-xl">
-          I'm currently in the dev team in SCE, Software Computer and
-          Engineering Society, at my school. It's primary focus is to aid
-          students by offering workshops, study groups, info sessions, and
-          social events
-        </p>
       </div>
     </div>
   );
