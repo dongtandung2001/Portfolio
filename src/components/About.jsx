@@ -23,10 +23,11 @@ const About = () => {
           Programming Languages: TypeScript, Python, JavaScript, Java.
         </li>
         <li className=" text-lg mt-5 italic">
-          Frameworks: React.js, Vue.js, Astro.js.
+          Frameworks: React.js, Vue.js, Astro.js, Next.js, Express.js.
         </li>
         <li className=" text-lg mt-5 italic">Databases: SQL, MongoDB.</li>
         <li className=" text-lg mt-5 italic">Cloud Platforms: AWS, GCP.</li>
+        <li className=" text-lg mt-5 italic">CI/CD: Docker, Github</li>
 
         <br />
         <p className="text-lg">
