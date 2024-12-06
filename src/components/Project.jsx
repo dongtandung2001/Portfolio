@@ -12,8 +12,8 @@ const Project = () => {
     {
       id: 4,
       src: healthWatch, // You'll need to import the image
-      code: "your-github-link",
-      demo: "your-demo-link",
+      code: "https://github.com/maggieqin0506/HeartAnomalyDetection",
+      demo: "https://github.com/maggieqin0506/HeartAnomalyDetection",
       title: "Health Guardian",
       description:
         "An advanced IoT healthcare solution delivering real-time monitoring of vital signs like heart rate and blood pressure. Leveraging a robust data pipeline powered by MQTT, Kafka, and Spark, it streams and analyzes continuous health data to identify potential heart failure risks.",
@@ -52,8 +52,8 @@ const Project = () => {
     {
       id: 5,
       src: restaurantFinder, // You'll need to import the image
-      code: "your-github-link",
-      demo: "your-demo-link",
+      code: "https://github.com/gopinathsjsu/team-project-backlog-breakers",
+      demo: "https://github.com/gopinathsjsu/team-project-backlog-breakers",
       title: "Restaurant Finder - Modern Restaurant Discovery Platform",
       description:
         "A full-stack restaurant discovery platform inspired by Yelp, built with Next.js and Go. Features include user authentication via next-auth, interactive map integration, advanced restaurant search with filters, user reviews and ratings, and restaurant owner dashboard. Deployed on AWS for scalability and reliability.",
