@@ -21,6 +21,7 @@ import vue from "../assets/vue.png";
 import astro from "../assets/astro.png";
 import gcp from "../assets/gcp.png";
 import typescript from "../assets/ts.png";
+import nextjs from "../assets/nextjs.png";
 
 const Skill = () => {
   const skills = [
@@ -31,13 +32,13 @@ const Skill = () => {
           id: 2,
           src: python,
           title: "Python",
-          style: "shadow-blue-400",
+          style: "shadow-blue-400 border-blue-400",
         },
         {
           id: 21,
           src: typescript,
           title: "Typescript",
-          style: "shadow-blue-500",
+          style: "shadow-blue-500 border-blue-500",
         },
         {
           id: 3,
@@ -79,6 +80,13 @@ const Skill = () => {
           src: vue,
           title: "Vue.Js",
           style: "shadow-green-500",
+        },
+        {
+          id: 19,
+          src: nextjs,
+          title: "Next.Js",
+          style:
+            "shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] border border-gray-700 hover:border-white/40",
         },
         {
           id: 7,
