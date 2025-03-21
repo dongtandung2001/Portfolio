@@ -54,10 +54,10 @@ const Experience = () => {
     <div id="experience" className="py-24 bg-white dark:bg-dark-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="section-title dark:text-dark-100 mb-6">
+          <h2 className="section-title dark:text-white mb-6">
             Professional Experience
           </h2>
-          <p className="text-gray-600 mt-10 dark:text-dark-200 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 mt-10 dark:text-gray-300 text-lg max-w-3xl mx-auto">
             My journey in software engineering and development.
           </p>
         </div>
@@ -82,12 +82,16 @@ const Experience = () => {
                   }`}
                 >
                   {/* Date section */}
-                  <div className="md:w-1/2 md:px-8 mb-6 md:mb-0 flex flex-col items-center md:items-end">
-                    <div className="flex items-center text-gray-500 dark:text-dark-200 mb-2">
+                  <div
+                    className={`md:w-1/2 md:px-8 mb-6 md:mb-0 flex flex-col ${
+                      index % 2 === 0 ? "md:items-end" : "md:items-start"
+                    }`}
+                  >
+                    <div className="flex items-center text-gray-500 dark:text-gray-300 mb-2">
                       <FiCalendar className="mr-2" />
                       <span>{job.duration}</span>
                     </div>
-                    <div className="flex items-center text-gray-500 dark:text-dark-200">
+                    <div className="flex items-center text-gray-500 dark:text-gray-300">
                       <FiMapPin className="mr-2" />
                       <span>{job.location}</span>
                     </div>
@@ -95,10 +99,16 @@ const Experience = () => {
 
                   {/* Content section */}
                   <div className="md:w-1/2 md:px-8">
-                    <div className="bg-white dark:bg-dark-400 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-primary-500 dark:border-primary-400">
+                    <div
+                      className={`bg-white dark:bg-dark-400 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 ${
+                        index % 2 === 0
+                          ? "border-l-4 border-primary-500 dark:border-primary-400"
+                          : "border-r-4 border-primary-500 dark:border-primary-400"
+                      }`}
+                    >
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-dark-100">
+                          <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                             {job.title}
                           </h3>
                           <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
@@ -113,7 +123,7 @@ const Experience = () => {
                                 <FiBriefcase className="text-primary-500 text-2xl" />
                               )}
                             </div>
-                            <span className="text-gray-700 dark:text-dark-200 font-medium self-center text-md">
+                            <span className="text-gray-700 dark:text-gray-300 font-medium self-center text-md">
                               {job.company}
                             </span>
                           </div>
@@ -124,7 +134,7 @@ const Experience = () => {
                         {job.description.map((item, i) => (
                           <li
                             key={i}
-                            className="text-gray-600 dark:text-dark-200 flex items-start"
+                            className="text-gray-600 dark:text-gray-300 flex items-start"
                           >
                             <span className="inline-block w-2 h-2 bg-primary-500 dark:bg-primary-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                             <span>{item}</span>
@@ -136,7 +146,7 @@ const Experience = () => {
                         {job.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 dark:bg-dark-500 text-gray-700 dark:text-dark-200 rounded-full text-sm"
+                            className="px-3 py-1 bg-gray-100 dark:bg-dark-500 text-gray-700 dark:text-gray-300 rounded-full text-sm"
                           >
                             {tech}
                           </span>

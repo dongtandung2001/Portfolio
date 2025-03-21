@@ -6,6 +6,8 @@ import Project from "./components/Project";
 import Skill from "./components/Skill";
 import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Achievement from "./components/Achievement";
 import { useTheme } from "./context/ThemeContext";
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Achievement />
+        <Education />
         <Project />
         <Skill />
       </main>

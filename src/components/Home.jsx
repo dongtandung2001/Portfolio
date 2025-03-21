@@ -24,8 +24,8 @@ const Home = () => {
               Full-stack Software Engineer
             </h2>
             <p className="text-gray-600 dark:text-dark-200 max-w-md mb-8 text-lg">
-              I build exceptional digital experiences that are fast, accessible,
-              and visually appealing.
+              I build intelligent applications powered by AI agents, focusing on
+              creating autonomous and adaptive software solutions.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
@@ -38,7 +38,7 @@ const Home = () => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/dungdong"
+                href="https://www.linkedin.com/in/danieldong2001/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white dark:bg-dark-400 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
