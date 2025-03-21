@@ -11,7 +11,7 @@ const Achievement = () => {
   const achievements = [
     {
       id: 1,
-      title: "Winner - One Trillion Agents Hackathon 2024",
+      title: "One Trillion Agents Hackathon",
       event: "NEAR Protocol's Global AI & Web3 Hackathon",
       subtitle: "2nd Place - Aurora AI Agentic Chains",
       date: "March 2025",
@@ -64,7 +64,7 @@ const Achievement = () => {
                     <span className="bg-gradient-to-r from-purple-500 to-indigo-600 dark:from-purple-400 dark:to-indigo-500 text-white px-3 py-1 rounded-md mr-2 shadow-sm">
                       Winner
                     </span>
-                    <span>One Trillion Agents Hackathon 2024</span>
+                    <span>{achievement.title}</span>
                   </h3>
                   {achievement.subtitle && (
                     <p className="text-amber-500 dark:text-yellow-400 text-sm font-semibold mt-3 inline-block py-0.5 px-2 bg-amber-50 dark:bg-yellow-900/30 rounded-md border border-amber-200 dark:border-yellow-700">
