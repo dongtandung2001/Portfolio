@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import sql4u from "../assets/portfolio/sql4u.png";
 import restaurantFinder from "../assets/portfolio/restaurant.webp";
-
 import storeapi from "../assets/portfolio/storeapi.png";
 import discord from "../assets/portfolio/discordbot.webp";
 import discordGpt from "../assets/portfolio/gpt.webp";
 import healthWatch from "../assets/portfolio/health.png";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const Project = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   const projects = [
     {
       id: 4,
-      src: healthWatch, // You'll need to import the image
+      src: healthWatch,
       code: "https://github.com/maggieqin0506/HeartAnomalyDetection",
       demo: "https://github.com/maggieqin0506/HeartAnomalyDetection",
       title: "Health Guardian",
       description:
         "An advanced IoT healthcare solution delivering real-time monitoring of vital signs like heart rate and blood pressure. Leveraging a robust data pipeline powered by MQTT, Kafka, and Spark, it streams and analyzes continuous health data to identify potential heart failure risks.",
-      tech: "IoT, MQTT, Kafka, Spark",
+      tech: ["IoT", "MQTT", "Kafka", "Spark"],
     },
     {
       id: 1,
@@ -27,7 +29,7 @@ const Project = () => {
       title: "SQL4U",
       description:
         "A MERN stack application helping users learn SQL through interactive exercises and real-time feedback. Features user authentication, progress tracking, and a comprehensive SQL tutorial system.",
-      tech: "MERN Stack",
+      tech: ["MongoDB", "Express", "React", "Node.js"],
     },
     {
       id: 3,
@@ -36,8 +38,8 @@ const Project = () => {
       demo: "https://github.com/dongtandung2001/aio-discord-bot/",
       title: "AIO Discord Bot",
       description:
-        "An AI-powered Discord bot leveraging OpenAI's GPT for natural conversations and Q&A. Features include OCR for image-to-text conversion, contextual memory for continuous conversations, moderation tools, and utility commands. Supports both casual chat and technical assistance.",
-      tech: "Discord.py, OpenAI API",
+        "An AI-powered Discord bot leveraging OpenAI's GPT for natural conversations and Q&A. Features include OCR for image-to-text conversion, contextual memory for continuous conversations, moderation tools, and utility commands.",
+      tech: ["Discord.py", "OpenAI API", "Python"],
     },
     {
       id: 2,
@@ -47,17 +49,17 @@ const Project = () => {
       title: "Discord Music Bot",
       description:
         "A feature-rich Discord bot that plays music from various sources, manages queues, and provides audio controls for server members.",
-      tech: "Discord.js",
+      tech: ["Discord.js", "Node.js", "JavaScript"],
     },
     {
       id: 5,
-      src: restaurantFinder, // You'll need to import the image
+      src: restaurantFinder,
       code: "https://github.com/gopinathsjsu/team-project-backlog-breakers",
       demo: "https://github.com/gopinathsjsu/team-project-backlog-breakers",
-      title: "Restaurant Finder - Modern Restaurant Discovery Platform",
+      title: "Restaurant Finder",
       description:
-        "A full-stack restaurant discovery platform inspired by Yelp, built with Next.js and Go. Features include user authentication via next-auth, interactive map integration, advanced restaurant search with filters, user reviews and ratings, and restaurant owner dashboard. Deployed on AWS for scalability and reliability.",
-      tech: "Next.js, Go, MongoDB, AWS",
+        "A full-stack restaurant discovery platform inspired by Yelp, built with Next.js and Go. Features include user authentication via next-auth, interactive map integration, advanced restaurant search with filters, user reviews and ratings, and restaurant owner dashboard.",
+      tech: ["Next.js", "Go", "MongoDB", "AWS"],
     },
     {
       id: 6,
@@ -67,67 +69,96 @@ const Project = () => {
       title: "Store API",
       description:
         "Full-featured e-commerce API with product management, user authentication, and order processing.",
-      tech: "Django, MySQL",
+      tech: ["Django", "MySQL", "Python", "RESTful API"],
     },
   ];
 
   return (
-    <div
-      id="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-16"
-    >
-      <div className="max-w-screen-lg mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold inline border-b-4 border-gray-500 pb-2">
-            Projects
-          </h2>
-          <p className="mt-6 flex items-center gap-2">
-            Check out some of my work. More on my
+    <div id="projects" className="py-24 bg-gray-50 dark:bg-dark-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="section-title dark:text-dark-100 mb-6">Projects</h2>
+          <p className="mt-10 text-lg text-gray-600 dark:text-dark-200 max-w-3xl mx-auto">
+            Here are some of my recent projects. Check out more on my
             <a
               href="https://github.com/dongtandung2001"
-              className="inline-flex items-center px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-500 dark:text-primary-400 ml-1 font-medium hover:underline"
             >
-              Github
+              GitHub
             </a>
+            .
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map(({ id, src, code, demo, title, description, tech }) => (
             <div
               key={id}
-              className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 flex flex-col h-full"
+              className="card overflow-hidden flex flex-col h-full transform hover:-translate-y-2 transition-all duration-300"
+              onMouseEnter={() => setHoveredProject(id)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
-              <div className="relative">
+              <div className="relative overflow-hidden group h-48">
                 <img
                   src={src}
                   alt={title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                  <h3 className="text-white font-bold text-lg">{title}</h3>
+                  <div className="flex gap-3">
+                    <a
+                      href={code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition-colors"
+                    >
+                      <FiGithub className="text-white" size={18} />
+                    </a>
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition-colors"
+                    >
+                      <FiExternalLink className="text-white" size={18} />
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold mb-2">{title}</h3>
-                  <span className="inline-block px-3 py-1 text-sm bg-gray-800 rounded-full">
-                    {tech}
-                  </span>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-dark-100">
+                    {title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {tech.map((item, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-dark-400 text-gray-800 dark:text-dark-100 rounded-full"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <p className="text-gray-400 text-sm mb-6 line-clamp-3">
+                <p className="text-gray-600 dark:text-dark-200 text-sm mb-6 flex-grow">
                   {description}
                 </p>
 
                 <div className="flex gap-4 mt-auto">
-                  <a href={demo} target="_blank" className="flex-1">
-                    <button className="w-full px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                      Demo
-                    </button>
-                  </a>
-                  <a href={code} target="_blank" className="flex-1">
-                    <button className="w-full px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                      Code
+                  <a
+                    href={demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <button className="w-full px-4 py-2 rounded-md bg-primary-500 hover:bg-primary-600 text-white transition-colors duration-300">
+                      View Demo
                     </button>
                   </a>
                 </div>

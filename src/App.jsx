@@ -5,16 +5,22 @@ import NavBar from "./components/NavBar";
 import Project from "./components/Project";
 import Skill from "./components/Skill";
 import SocialLinks from "./components/SocialLinks";
+import Experience from "./components/Experience";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <About />
-      <Project />
-      <Skill />
+  const { theme } = useTheme();
 
+  return (
+    <div className="transition-colors duration-300">
+      <NavBar />
+      <main>
+        <Home />
+        <About />
+        <Experience />
+        <Project />
+        <Skill />
+      </main>
       <SocialLinks />
     </div>
   );
