@@ -46,7 +46,7 @@ const Home = () => {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:dongtandung2001@gmail.com"
                 className="p-3 bg-white dark:bg-dark-400 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
               >
                 <HiOutlineMail size={24} />

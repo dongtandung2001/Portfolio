@@ -143,7 +143,7 @@ const SocialLinks = () => {
       </div>
 
       {/* Section that appears below Skills on medium and small screens */}
-      <div id="connect" className="lg:hidden py-16 bg-white dark:bg-dark-600">
+      <div id="connect" className="lg:hidden py-16 bg-gray-50 dark:bg-dark-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-title dark:text-dark-100 mb-6">
@@ -250,7 +250,7 @@ const SocialLinks = () => {
       </div>
 
       {/* Footer */}
-      <div className="py-6 bg-gray-50 dark:bg-dark-500">
+      <div className="py-6 bg-gray-100 dark:bg-dark-700">
         <div className="text-center text-gray-500 dark:text-dark-300 text-sm">
           © {new Date().getFullYear()} Dung Dong. All rights reserved.
         </div>

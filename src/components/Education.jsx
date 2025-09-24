@@ -16,7 +16,14 @@ const Education = () => {
         "Enterprise Software Platforms",
         "Software Systems Engineering",
         "Data Mining",
+        "Virtualization Technologies",
+        "Software Security Technologies",
       ],
+      project: {
+        title: "AI Documentation Agent",
+        description: "An AI-powered agent specialized in automatically generating comprehensive documentation for any codebase, leveraging advanced code analysis and natural language processing techniques.",
+        status: "In Progress"
+      },
     },
     {
       id: 2,
@@ -125,6 +132,29 @@ const Education = () => {
                   </div>
                 )}
               </div>
+
+              {edu.project && (
+                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-dark-500">
+                  <h4 className="text-lg font-semibold text-gray-700 dark:text-dark-100 mb-3">
+                    Master's Project
+                  </h4>
+                  <div className="bg-gray-50 dark:bg-dark-500 rounded-lg p-4">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h5 className="font-medium text-gray-800 dark:text-dark-100">
+                        {edu.project.title}
+                      </h5>
+                      {edu.project.status && (
+                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                          {edu.project.status}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-gray-600 dark:text-dark-200">
+                      {edu.project.description}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

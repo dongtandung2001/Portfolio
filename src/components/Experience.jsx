@@ -7,42 +7,57 @@ import {
 } from "react-icons/fi";
 import rockliffeLogo from "../assets/portfolio/rockliffe-clean.svg"; // Updated to use the cleaner version
 import sjsuLogo from "../assets/portfolio/SCE.png";
+import amazonLogo from "../assets/portfolio/amazon.webp";
 
 const Experience = () => {
   const experiences = [
     {
       id: 1,
+      title: "SDE Intern",
+      company: "Amazon Web Services",
+      location: "Santa Clara, CA, USA",
+      duration: "May 2025 - August 2025",
+      logo: amazonLogo,
+      description: [
+        "Added trust-mode to the AWS language server to improve developer flow by auto-approving shell commands with security guardrails that require explicit user approval for detected destructive/unsafe operations, resulting in 70% internal adoption across IDE plugins within 3 weeks",
+        "Implemented keyboard shortcuts for agent execution controls in the Amazon Q IDE plugins to keep developers hands-on-keyboard and cut pointer use, resulting in 60% of agent actions triggered via shortcuts",
+        "Enhanced automation scripts for local build generation, reducing manual setup effort by ~40% and accelerating testing cycles",
+        "Inherited and extended mynah-ui's event-driven, native DOM architecture to ship a reusable dropdown form component supporting rich menu layouts and responsive styling; integrated into the Amazon Q IDE extension in VS Code, with Playwright E2E coverage",
+      ],
+      technologies: ["TypeScript", "VS Code Extensions", "Playwright", "mynah-ui", "Amazon Q"],
+    },
+    {
+      id: 2,
       title: "Software Engineer Intern",
       company: "Rockliffe Systems",
       location: "Remote",
       duration: "June 2024 - August 2024",
       logo: rockliffeLogo,
       description: [
-        "Modernized technology stack for Mailsite website to enable faster site response, better user experience, reduction of maintenance, and future growth",
-        "Leveraged Astro.js for static site generation, resulting in 40% faster load times",
-        "Designed and implemented RESTful APIs to handle services and database operations",
-        "Architected and developed a new frontend using Vue.js, Tailwind and TypeScript, improving user experience",
-        "Migrated complex business logic from C# to TypeScript, maintaining functionality while improving code maintainability",
+        "Modernized stack with Astro (SSG) + Vue islands, Tailwind, TypeScript, reducing shipped JS and simplifying maintenance (clearer module boundaries, fewer ad-hoc templates)",
+        "Improved median LCP by ~40% (Lighthouse) through Astro SSG, asset pruning, and CDN caching",
+        "Replaced hardcoded pages with REST APIs backed by an SQL database and introduced basic caching to stabilize response times",
+        "Migrated core business logic from C# to TypeScript to unify the stack and simplify maintenance, validating with parity tests",
       ],
-      technologies: ["Astro.js", "Vue.js", "TypeScript", "Tailwind", "SQL"],
+      technologies: ["Astro.js", "Vue.js", "TypeScript", "Tailwind CSS", "SQL", "C#"],
     },
     {
-      id: 2,
+      id: 3,
       title: "Software Engineer Intern",
       company: "SJSU Software and Computer Engineering Society",
       location: "San Jose, CA, USA",
       duration: "May 2023 - August 2023",
-      logo: sjsuLogo, // No logo available, will use default briefcase icon
+      logo: sjsuLogo,
       description: [
-        "Created a music streaming discord bot for a school discord server with Discord.js and the ytdl-core Node.js library",
-        "Implemented commands to control the bot which included song search, pausing and managing a queue of songs",
-        "Integrated useful metrics to monitor the bot's performance with Prometheus, built monitoring dashboards with Grafana",
-        "Enabled searching for songs by using the play-dl Node.js library, returned the top 5 results for the user to select from",
-        "Oversaw and executed updates to the discord bot using Docker, Docker Compose via SSH",
+        "Built a music-streaming Discord bot (Node.js, Discord.js, ytdl-core / play-dl) with play/pause/skip/search and per-server in-memory queues to minimize latency and eliminate unnecessary infrastructure overhead",
+        "Instrumented runtime metrics with Prometheus and created Grafana dashboards to monitor performance and basic health",
+        "Containerized & deployed via Docker and Docker Compose over SSH, enabling straightforward updates and rollback",
       ],
       technologies: [
         "Node.js",
         "Discord.js",
+        "ytdl-core",
+        "play-dl",
         "Docker",
         "Prometheus",
         "Grafana",
@@ -105,24 +120,24 @@ const Experience = () => {
                       }`}
                     >
                       <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                            {job.title}
-                          </h3>
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
-                            <div className="p-2 rounded-md flex items-center justify-center w-16 h-12">
-                              {job.logo ? (
-                                <img
-                                  src={job.logo}
-                                  alt={`${job.company} Logo`}
-                                  className="w-12 h-9 object-contain"
-                                />
-                              ) : (
-                                <FiBriefcase className="text-primary-500 text-2xl" />
-                              )}
-                            </div>
-                            <span className="text-gray-700 dark:text-gray-300 font-medium self-center text-md">
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-md flex items-center justify-center w-16 h-16 flex-shrink-0">
+                            {job.logo ? (
+                              <img
+                                src={job.logo}
+                                alt={`${job.company} Logo`}
+                                className="max-w-12 max-h-12 w-auto h-auto object-contain"
+                              />
+                            ) : (
+                              <FiBriefcase className="text-primary-500 text-2xl" />
+                            )}
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                               {job.company}
+                            </h3>
+                            <span className="text-gray-700 dark:text-gray-300 font-medium text-md">
+                              {job.title}
                             </span>
                           </div>
                         </div>

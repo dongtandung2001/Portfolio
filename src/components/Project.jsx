@@ -169,15 +169,15 @@ const Project = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-4 mt-auto">
+                <div className="mt-auto">
                   <a
                     href={demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1"
+                    className="block"
                   >
                     <button className="w-full px-4 py-2 rounded-md bg-primary-500 hover:bg-primary-600 text-white transition-colors duration-300">
-                      View Demo
+                      View Project
                     </button>
                   </a>
                 </div>

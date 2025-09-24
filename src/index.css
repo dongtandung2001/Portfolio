@@ -33,4 +33,5 @@
   .nav-link {
     @apply px-4 cursor-pointer capitalize font-medium text-gray-700 dark:text-dark-200 hover:text-primary-500 dark:hover:text-primary-400 hover:scale-105 transition-all duration-200;
   }
+
 }

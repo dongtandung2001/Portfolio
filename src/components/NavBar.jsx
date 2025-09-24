@@ -71,8 +71,17 @@ const NavBar = () => {
           <ul className="flex space-x-2">
             {links.map(({ id, link }) => (
               <li key={id} className="nav-link">
-                <Link to={link} smooth duration={500} className="block py-2">
-                  {link}
+                <Link
+                  to={link}
+                  smooth
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="text-primary-500 dark:text-primary-400"
+                  className="block py-2 transition-colors cursor-pointer"
+                >
+                  {link.charAt(0).toUpperCase() + link.slice(1)}
                 </Link>
               </li>
             ))}
@@ -128,8 +137,13 @@ const NavBar = () => {
                   to={link}
                   smooth
                   duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="text-primary-500 dark:text-primary-400"
+                  className="transition-colors cursor-pointer"
                 >
-                  {link}
+                  {link.charAt(0).toUpperCase() + link.slice(1)}
                 </Link>
               </li>
             ))}
