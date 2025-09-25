@@ -19,10 +19,10 @@ const Experience = () => {
       duration: "May 2025 - August 2025",
       logo: amazonLogo,
       description: [
-        "Added trust-mode to the AWS language server to improve developer flow by auto-approving shell commands with security guardrails that require explicit user approval for detected destructive/unsafe operations, resulting in 70% internal adoption across IDE plugins within 3 weeks",
-        "Implemented keyboard shortcuts for agent execution controls in the Amazon Q IDE plugins to keep developers hands-on-keyboard and cut pointer use, resulting in 60% of agent actions triggered via shortcuts",
-        "Enhanced automation scripts for local build generation, reducing manual setup effort by ~40% and accelerating testing cycles",
-        "Inherited and extended mynah-ui's event-driven, native DOM architecture to ship a reusable dropdown form component supporting rich menu layouts and responsive styling; integrated into the Amazon Q IDE extension in VS Code, with Playwright E2E coverage",
+        "Added trust-mode to the AWS language server (backend for Amazon Q IDE plugins) to improve developer flow by auto-approving shell commands with security guardrails, resulting in 70% of internal users enabling the feature within 3 weeks.",
+        "Implemented keyboard shortcuts for agent execution controls in the Amazon Q IDE plugin to keep developers hands-on-keyboard and cut pointer use, resulting in 60% of agent actions triggered via shortcuts.",
+        "Enhanced automation scripts for local build generation, reducing manual setup effort by ~40% and accelerating testing cycles.",
+        "Inherited mynah-ui's event-driven, native DOM architecture to ship a reusable dropdown form component supporting rich menu layouts and responsive styling (beyond the native <select>); with Playwright E2E coverage.",
       ],
       technologies: ["TypeScript", "VS Code Extensions", "Playwright", "mynah-ui", "Amazon Q"],
     },
@@ -34,9 +34,9 @@ const Experience = () => {
       duration: "June 2024 - August 2024",
       logo: rockliffeLogo,
       description: [
-        "Modernized stack with Astro (SSG) + Vue islands, Tailwind, TypeScript, reducing shipped JS and simplifying maintenance (clearer module boundaries, fewer ad-hoc templates)",
-        "Improved median LCP by ~40% (Lighthouse) through Astro SSG, asset pruning, and CDN caching",
-        "Replaced hardcoded pages with REST APIs backed by an SQL database and introduced basic caching to stabilize response times",
+        "Modernized stack with Astro (SSG) + Vue islands, Tailwind, TypeScript, reducing shipped JS and simplifying maintenance.",
+        "Improved median LCP by ~40% (Lighthouse) through Astro SSG, asset pruning, and CDN caching.",
+        "Replaced hardcoded pages with REST APIs backed by an SQL database and introduced basic caching to stabilize response times.",
         "Migrated core business logic from C# to TypeScript to unify the stack and simplify maintenance, validating with parity tests",
       ],
       technologies: ["Astro.js", "Vue.js", "TypeScript", "Tailwind CSS", "SQL", "C#"],
@@ -50,8 +50,8 @@ const Experience = () => {
       logo: sjsuLogo,
       description: [
         "Built a music-streaming Discord bot (Node.js, Discord.js, ytdl-core / play-dl) with play/pause/skip/search and per-server in-memory queues to minimize latency and eliminate unnecessary infrastructure overhead",
-        "Instrumented runtime metrics with Prometheus and created Grafana dashboards to monitor performance and basic health",
-        "Containerized & deployed via Docker and Docker Compose over SSH, enabling straightforward updates and rollback",
+        "Instrumented runtime metrics with Prometheus and created Grafana dashboards to monitor performance and basic health.",
+        "Containerized & deployed via Docker and Docker Compose over SSH, enabling straightforward updates and rollback.",
       ],
       technologies: [
         "Node.js",
